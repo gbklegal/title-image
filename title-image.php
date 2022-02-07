@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Titelbild
  * Description: Description coming soon.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Tobias Röder
  * Author URI: https://tobias-roeder.de
  */
@@ -58,7 +58,7 @@ add_action( 'save_post', 'title_image_meta_box' );
  * 
  * @return string
  */
-function get_title_image_by_id( $options ) {
+function get_title_image_by_id( $options = [] ) {
     $postId = $options['post_id'] ?? get_the_ID();
     $imageId = get_post_meta( $postId, 'title_image_id', true );
 
